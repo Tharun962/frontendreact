@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import {BrowserRouter, Routes,Route} from 'react-router-dom';
+import Front from './Pages/FrontPage/Front';
+import LoginPage from './Pages/LoginPage/LoginPage';
+import LandingPage from './Pages/LandingPage/LandingPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <BrowserRouter>
+    <Routes>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/SignUp' element={<Front/>}/>
+        <Route path='/Login' element={<LoginPage/>}/>
+    </Routes>
+    </BrowserRouter>
+);

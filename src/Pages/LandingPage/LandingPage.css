@@ -1,0 +1,71 @@
+.LandingContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.LandingBackground
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+.LandingBackground .Title
+{
+    position: absolute;
+    top: 10px;
+    left:50px;
+    color: white;
+}
+.LandingBackground .Menu
+{
+    position: absolute;
+    top: 20px;
+    right:50px;
+}
+.SubMenu
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+    background-color: aliceblue;
+    width:200px;
+    height:200px;
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.SubMenu .Cross
+{
+    margin-left:80%;
+    margin-top:0px;
+}
+.SubMenu h3
+{
+    margin-left:10px;
+    font-weight: 400;
+}
+.LandingSubSection
+{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+    flex-direction: column;
+}
+.LandingSubSection h3
+{
+    font-weight:400;
+}
+.LandingSubSection img
+{
+    width:60%;
+    height: 60%;
+}

@@ -1,0 +1,21 @@
+.FooterContainer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #E4EAF2;
+    margin-top:100px;
+}
+.FooterContainer h4
+{
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+.FooterContainer h3
+{
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(193, 187, 187);
+}
