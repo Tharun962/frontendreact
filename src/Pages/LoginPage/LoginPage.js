@@ -57,7 +57,7 @@ function LoginPage()
              <button onClick={()=>submitData()}>Sign In</button>
            </div>
         </div>
-        <h3 style={{color:"black"}} onClick={()=>window.location.href="/"}>Already have the account?<span style={{color:"#B82925"}}>Log In</span></h3>
+        <h3 style={{color:"black"}} onClick={()=>window.location.href="/"}>Don't have account?<span style={{color:"#B82925"}}>Sign Up</span></h3>
       </div>
    ); 
 }

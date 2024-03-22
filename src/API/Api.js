@@ -9,6 +9,7 @@ const logoutEndPoint="logout"
 async function Login(data)
 {
    try{
+      Request()
      const response=await axios.post(`${url}/${loginEndPoint}`,data,{headers:{'Content-Type':'application/json'},withCredentials:true})
      if(response.data)
      {
