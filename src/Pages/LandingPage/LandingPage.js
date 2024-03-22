@@ -31,6 +31,7 @@ function LandingPage()
              <img src={back}/>
              <h3 className='Title'>Weather Report</h3>
              <img src={menu} className='Menu' width="25" height="25"  onClick={()=>menuFunction()}/>
+             <h2>Check the Weather Data</h2>
              <div className='SubMenu'>
                 <img src={cross} className='Cross' width="25" height="25" onClick={()=>crossFunction()}/>
                 <h3 onClick={()=>window.location.href="/SignUp"}>Sign Up</h3>

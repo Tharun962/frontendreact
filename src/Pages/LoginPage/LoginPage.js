@@ -1,16 +1,42 @@
+import { useState } from "react";
+import { Login } from "../../API/Api";
+
 function LoginPage()
 {
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
+
+  const submitData=({email:email,password:password})=>{
+    if(email=="" ||email===null)
+    {
+      alert("Please enter email");
+      return;
+    }
+    if(password=="" ||password===null)
+    {
+      alert("Password not match");
+      return;
+    }
+
+      Login()
+      .then(res=>{
+           console.log(res);
+      })
+      .catch(err=>{
+          throw err;
+      });
+  }
    return (
        <div className='FrontContainer'>
         <h3>Log In</h3>
         <div className="FormLogin">
            <div className='FormSection'>
                <label>Email</label>
-               <input type='text' placeholder='Email'/>
+               <input type='text' placeholder='Email' onChange={(e)=>setEmail(e.target.value)}/>
            </div>
            <div className='FormSection'>
                <label>Password</label>
-               <input type='text' placeholder='Password'/>
+               <input type='text' placeholder='Password' onChange={(e)=>setPassword(e.target.value)}/>
            </div>
            <div className='FormSection'>
            <h3>Forgot your password?</h3>
