@@ -11,7 +11,7 @@
     border: 3px dashed grey;
     border-radius: 20px;
     padding-bottom: 30px;
-    width: max-content;
+    width: 60%;
     padding: 0px 20px 20px 20px;
     display: flex;
     align-items: center;
@@ -59,3 +59,10 @@
     outline: none;
   }
   
+  @media screen and (max-width:480px) {
+    
+    .weather form input
+    {
+      margin-bottom:20px;
+    }
+  }

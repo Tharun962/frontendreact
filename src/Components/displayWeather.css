@@ -2,37 +2,35 @@
     margin-top: 20px;
     display: flex;
     flex-flow: column nowrap;
+    width:100%;
+    justify-content: center;
   }
   
   .displayweather .maincard {
-    width: 500px;
+    width: 70%;
     margin-top: 20px;
     align-self: center;
-    padding: 50px;
     border-radius: 20px;
     position: relative;
     background: rgb(245, 242, 242);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:auto;
   }
-  
   .displayweather .maincard .cardtitle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     font-size: 1.5rem;
   }
   
   .displayweather .maincard .cardsubtitle {
-    position: absolute;
-    left: 10px;
-  
     color: grey;
     margin-top: -8px;
   }
   .displayweather h1 {
     font-size: 5rem;
-    margin: -10px;
-    margin-left: -150px;
+
   }
   
   .displayweather .weather-icon {
@@ -84,3 +82,6 @@
     font-size: 1.2rem;
   }
   
+  @media screen and (max-width:480px) {
+    
+  }

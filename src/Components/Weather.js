@@ -3,6 +3,7 @@ import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
 import LandingPage from "../Pages/LandingPage/LandingPage";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 function Weather() {
   const [weather, setWeather] = useState([]);
@@ -72,6 +73,7 @@ function Weather() {
         </div>
       ) : null}
     </div>
+    <Footer/>
     </div>
   );
 }

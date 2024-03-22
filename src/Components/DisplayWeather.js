@@ -19,16 +19,15 @@ function DisplayWeather(props) {
             </span>
 
             <h1>
-              {" "}
+              {/* {" "} */}
               {Math.floor(data.main.temp - 273.15)}
               <sup>o</sup>
             </h1>
             <span className="weather-main">{data.weather[0].main}</span>
             <img className="weather-icon" src={iconurl} alt="" srcSet="" />
-            <span className="weather-description">
-              {" "}
+            {/* <span className="weather-description">
               {data.weather[0].description}
-            </span>
+            </span> */}
           </div>
           <div className="weatherdetails">
             <div className="section1">
