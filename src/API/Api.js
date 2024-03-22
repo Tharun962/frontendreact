@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url="https://backendnode-6l8v.onrender.com";
+const url="http://backendnode-6l8v.onrender.com";
 
 const loginEndPoint="login"
 const registerEndPoint="register"
