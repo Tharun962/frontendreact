@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
+import LandingPage from "../Pages/LandingPage/LandingPage";
+import Header from "./Header/Header";
 
 function Weather() {
   const [weather, setWeather] = useState([]);
@@ -38,7 +40,10 @@ function Weather() {
     }
   };
   return (
-    <div className="weather">
+ 
+      <div className="WeatherContainer">
+        <Header/>
+      <div className="weather">
       <span className="title">Weather App</span>
       <br />
       <form>
@@ -66,6 +71,7 @@ function Weather() {
           <DisplayWeather data={weather.data} />
         </div>
       ) : null}
+    </div>
     </div>
   );
 }

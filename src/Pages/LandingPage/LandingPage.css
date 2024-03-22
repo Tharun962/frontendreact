@@ -47,11 +47,13 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    display: none;
 }
 .SubMenu .Cross
 {
     margin-left:80%;
     margin-top:0px;
+
 }
 .SubMenu h3
 {

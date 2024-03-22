@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Login } from "../../API/Api";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage()
 {
+  const navigate=useNavigate();
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
 
-  const submitData=({email:email,password:password})=>{
+  const submitData=()=>{
     if(email=="" ||email===null)
     {
       alert("Please enter email");
@@ -18,11 +20,21 @@ function LoginPage()
       return;
     }
 
-      Login()
+      Login({email:email,password:password})
       .then(res=>{
-           console.log(res);
+          if(res.login)
+          {
+            sessionStorage.setItem("login","true");
+            navigate("/Weather");
+          }
+          else
+          {
+            sessionStorage.setItem("login","false");
+            alert(res.msg);
+          }
       })
       .catch(err=>{
+        sessionStorage.setItem("login","false");
           throw err;
       });
   }
@@ -32,17 +44,17 @@ function LoginPage()
         <div className="FormLogin">
            <div className='FormSection'>
                <label>Email</label>
-               <input type='text' placeholder='Email' onChange={(e)=>setEmail(e.target.value)}/>
+               <input type='email' placeholder='Email' onChange={(e)=>setEmail(e.target.value)}/>
            </div>
            <div className='FormSection'>
                <label>Password</label>
-               <input type='text' placeholder='Password' onChange={(e)=>setPassword(e.target.value)}/>
+               <input type='password' placeholder='Password' onChange={(e)=>setPassword(e.target.value)}/>
            </div>
            <div className='FormSection'>
            <h3>Forgot your password?</h3>
            </div>
            <div className='FormSection'>
-             <button>Sign In</button>
+             <button onClick={()=>submitData()}>Sign In</button>
            </div>
         </div>
         <h3 style={{color:"black"}} onClick={()=>window.location.href="/"}>Already have the account?<span style={{color:"#B82925"}}>Log In</span></h3>
